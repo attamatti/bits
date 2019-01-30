@@ -20,7 +20,7 @@ def read_starfile_new(f):
             header.append(i.strip("\n"))
             if '_rln' in i and '#' in i and  '_rln' not in alldata[count+1] and '#' not in alldata[count+1]:
                 inhead = False
-        else:
+        elif len(i.split())>=1:
             data.append(i.split())
         count +=1
     
@@ -51,7 +51,7 @@ def read_starfile(f):
             header.append(i.strip("\n"))
             if '_rln' in i and '#' in i and  '_rln' not in alldata[count+1] and '#' not in alldata[count+1]:
                 inhead = False
-        else:
+        elif len(i.split())>=1:
             data.append(i.split())
         count +=1
     
